@@ -1,17 +1,4 @@
-%Below is a detailed, line-by-line translation of your Python class into a MATLAB class. I first discuss the mapping of key Python/Numpy constructs to MATLAB equivalents, and then provide the complete MATLAB code.
-
-%**1. Class structure and property mapping**
-%In MATLAB, classes live in their own `@ClassName` folder or as a single `ClassName.m` file. We declare all instance variables under a `properties` block, mirroring your Python `__init__` signature. The constructor (`function obj = ClassName(...)`) assigns each input to the corresponding property.
-
-%**2. Random matrices, slicing and reshaping**
-%MATLAB%s `rand` and `randn` replace `np.random.rand` and `np.random.randn`. 1-based indexing in MATLAB means `weights_vector(1:obj.matrix_real_dim)` corresponds to Python’s `weights_vector[0:self.matrix_real_dim]`. Reshaping uses `reshape(vector, [rows,cols])`. To handle batches, we reshape each row of a 2D array in a loop or with `permute` if desired.
-
-%**3. Complex arithmetic, unitary/symmetric decompositions**
-%MATLAB naturally handles complex numbers using `1j`. Eigen-decomposition is `eig`, and QR decomposition is `qr`. To enforce symmetry/unitarity, we average a matrix with its transpose (or conjugate transpose) and check with `eye(n)` plus a tolerance.
-
-%**4. Error checking and vector-triangle conversions**
-%We compute the triangular-vector length check via `n*(n+1)/2~=length(vector)` and throw an error. The loop filling upper triangle uses nested `for` loops exactly as in Python, but with MATLAB indexing.
-
+% translated from python
 
 
 
