@@ -26,7 +26,7 @@ OPL_span_in_lambda = 30;         % Max optical path variation / lambda
 diffuser_strength = 2*pi;
 N_diff = 1;                       % Size of a constant-phase block [SLM px]
 
-target_type = 'gaussian';          % 'gaussian', 'checker', or 'image'
+target_type = 'checker';          % 'gaussian', 'checker', or 'image'
 target_file = 'cat_cartoon_160x160.png';
 target_FWHM = 5;
 checker_tile = 20;
